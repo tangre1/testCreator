@@ -6,76 +6,76 @@
       "id": "q1",
       "topic": "Functions",
       "difficulty": 1,
-      "latex": "\\question Define a function. Explain how it differs from a relation."
+      "latex": "Define a function. Explain how it differs from a relation."
     },
     {
       "id": "q2",
       "topic": "Functions",
       "difficulty": 2,
-      "latex": "\\question Determine whether the relation given by the set $\\{(1,2),(2,3),(1,4)\\}$ is a function. Justify your answer."
+      "latex": "Determine whether the relation given by the set $\\{(1,2),(2,3),(1,4)\\}$ is a function. Justify your answer."
     },
     {
       "id": "q3",
       "topic": "Functions",
       "difficulty": 3,
-      "latex": "\\question Given $f(x)=x^2-4x+5$, determine whether $f$ is one-to-one and explain your reasoning."
+      "latex": "Given $f(x)=x^2-4x+5$, determine whether $f$ is one-to-one and explain your reasoning."
     },
 
     {
       "id": "q4",
       "topic": "Domain and Range",
       "difficulty": 1,
-      "latex": "\\question Find the domain of the function $f(x)=\\sqrt{2x-5}$."
+      "latex": "Find the domain of the function $f(x)=\\sqrt{2x-5}$."
     },
     {
       "id": "q5",
       "topic": "Domain and Range",
       "difficulty": 2,
-      "latex": "\\question Find the domain of the function $f(x)=\\dfrac{1}{x^2-9}$."
+      "latex": "Find the domain of the function $f(x)=\\dfrac{1}{x^2-9}$."
     },
     {
       "id": "q6",
       "topic": "Domain and Range",
       "difficulty": 3,
-      "latex": "\\question Find the domain and range of the function $f(x)=|x-3|+2$."
+      "latex": "Find the domain and range of the function $f(x)=|x-3|+2$."
     },
 
     {
       "id": "q7",
       "topic": "Graphing",
       "difficulty": 1,
-      "latex": "\\question Sketch the graph of $f(x)=x^2$ and identify its vertex."
+      "latex": "Sketch the graph of $f(x)=x^2$ and identify its vertex."
     },
     {
       "id": "q8",
       "topic": "Graphing",
       "difficulty": 2,
-      "latex": "\\question Sketch the graph of $f(x)=(x-2)^2+1$ and describe how it relates to the graph of $y=x^2$."
+      "latex": "Sketch the graph of $f(x)=(x-2)^2+1$ and describe how it relates to the graph of $y=x^2$."
     },
     {
       "id": "q9",
       "topic": "Graphing",
       "difficulty": 3,
-      "latex": "\\question Describe the transformations applied to $y=x^2$ to obtain the graph of $f(x)=-2(x+1)^2+3$."
+      "latex": "Describe the transformations applied to $y=x^2$ to obtain the graph of $f(x)=-2(x+1)^2+3$."
     },
 
     {
       "id": "q10",
       "topic": "Function Notation",
       "difficulty": 1,
-      "latex": "\\question Evaluate $f(3)$ for the function $f(x)=2x^2-5x+1$."
+      "latex": "Evaluate $f(3)$ for the function $f(x)=2x^2-5x+1$."
     },
     {
       "id": "q11",
       "topic": "Function Notation",
       "difficulty": 2,
-      "latex": "\\question Given $f(x)=3x-2$ and $g(x)=x^2$, find $(f\\circ g)(x)$."
+      "latex": "Given $f(x)=3x-2$ and $g(x)=x^2$, find $(f\\circ g)(x)$."
     },
     {
       "id": "q12",
       "topic": "Function Notation",
       "difficulty": 3,
-      "latex": "\\question Given $f(x)=\\sqrt{x}$, find the inverse function $f^{-1}(x)$ and state its domain."
+      "latex": "Given $f(x)=\\sqrt{x}$, find the inverse function $f^{-1}(x)$ and state its domain."
     }
   ]
 }

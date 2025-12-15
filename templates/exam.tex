@@ -1,62 +1,113 @@
-\documentclass[12pt,addpoints]{exam}
+\documentclass[12pt]{article}
 
-% --------------------
-% Packages
-% --------------------
 \usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{enumitem}
+\usepackage{geometry}
+
+\geometry{
+  letterpaper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
+}
 
 % --------------------
-% Page Layout
+% Page style (CSU exact)
 % --------------------
-\pagestyle{head}
-\firstpageheader{}{}{}
-\runningheader{\textbf{{{ COURSE }}}}{\textbf{{{ UNIT }} Exam}}{\textbf{\thepage}}
-\runningheadrule
+\makeatletter
+\def\ps@plain{
+  \def\@oddhead{\hbox to \textwidth{A1\hfil\thepage}}
+  \def\@oddfoot{}
+}
+\pagestyle{plain}
+\makeatother
 
-\firstpagefooter{}{}{}
-\runningfooter{}{}{}
-
-% --------------------
-% Exam Metadata
-% --------------------
-\title{\vspace{-2em}\textbf{{{ COURSE }}} \\ \large {{{ UNIT }} Exam}}
-\date{}
-\author{}
-
-% --------------------
-% Document
-% --------------------
 \begin{document}
 
-\maketitle
+% =====================
+% COVER PAGE
+% =====================
+
+\vspace*{0.8em}
+
+\noindent
+\textbf{NAME:}\hspace{0.5em}\rule{5.7in}{0.4pt}
+
+\vspace{2em}
+
+\begin{center}
+{\Large \textbf{Fall 2023 \hspace{1em} Cleveland State University}}\\[0.3em]
+{\Large \textbf{Precalculus I MTH167 Test 1}}
+\end{center}
+
+\vspace{2em}
+
+\noindent
+\textbf{Instructions:} Work as many problems, or parts of problems, as you are able.
+Justify all solutions, showing all the steps in your calculations.
+Answers should be given as exact values, unless a decimal approximation is
+specifically requested.
 
 \vspace{1em}
 
 \noindent
-\textbf{Name:} \rule{6cm}{0.4pt} \hfill
-\textbf{Date:} \rule{3cm}{0.4pt}
+This exam consists of 8 questions printed on 7 pages (including the cover page),
+for a total of 100 points.
 
-\vspace{1em}
+\vspace{3em}
 
 \noindent
-\textbf{Instructions:}
-\begin{itemize}[leftmargin=2em]
-  \item Show all work for full credit.
-  \item Simplify all answers unless otherwise stated.
-  \item Calculators are \emph{not} permitted unless explicitly allowed.
-\end{itemize}
+\textbf{Name:}\hspace{0.5em}\rule{5.4in}{0.4pt}
 
-\vspace{1em}
+\vspace{1.5em}
+
+\noindent
+\textbf{Section \#:}\hspace{0.5em}\rule{5.2in}{0.4pt}
+
+\vspace{1.5em}
+
+\noindent
+\textbf{Instructor:}\hspace{0.5em}\rule{5.1in}{0.4pt}
+
+\vfill
+
+\noindent
+Please do not write below this line.
+
+\vspace{0.4em}
+\hrule
+
+\vspace{1.5em}
 
 % --------------------
-% Questions
+% POINTS TABLE
 % --------------------
-\begin{questions}
+\noindent
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+1 [24] & 2 [14] & 3 [14] & 4 [10] & 5 [10] & 6 [8] & 7 [10] & 8 [10] & Total [100] \\
+\hline
+ &  &  &  &  &  &  &  &  \\
+\hline
+\end{tabular}
+
+\newpage
+
+% =====================
+% PAGE 2+ HEADER
+% =====================
+\makeatletter
+\def\ps@plain{
+  \def\@oddhead{\hbox to \textwidth{A1\quad NAME:\hfil\thepage}}
+  \def\@oddfoot{}
+}
+\pagestyle{plain}
+\makeatother
+
+% =====================
+% QUESTIONS
+% =====================
 
 {{ QUESTIONS }}
-
-\end{questions}
 
 \end{document}

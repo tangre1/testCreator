@@ -12,7 +12,7 @@ def build_latex(course: str, unit: str, questions: List[Question]) -> str:
     Assemble a LaTeX exam document from selected questions.
 
     Args:
-        course: Course identifier (e.g., CS 345)
+        course: Course identifier (e.g., Precalculus I)
         unit: Unit or chapter name
         questions: Ordered list of selected questions
 
@@ -25,8 +25,11 @@ def build_latex(course: str, unit: str, questions: List[Question]) -> str:
 
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
 
-    # Concatenate question LaTeX blocks
-    question_block = "\n".join(q.latex for q in questions)
+    # Number questions in CSU style (article-safe)
+    question_block = "\n\n".join(
+        f"\\noindent\\textbf{{{i + 1}.}} {q.latex}"
+        for i, q in enumerate(questions)
+    )
 
     # Replace template placeholders
     latex_document = (
