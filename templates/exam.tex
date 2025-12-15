@@ -1,0 +1,62 @@
+\documentclass[12pt,addpoints]{exam}
+
+% --------------------
+% Packages
+% --------------------
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% --------------------
+% Page Layout
+% --------------------
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\textbf{{{ COURSE }}}}{\textbf{{{ UNIT }} Exam}}{\textbf{\thepage}}
+\runningheadrule
+
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+
+% --------------------
+% Exam Metadata
+% --------------------
+\title{\vspace{-2em}\textbf{{{ COURSE }}} \\ \large {{{ UNIT }} Exam}}
+\date{}
+\author{}
+
+% --------------------
+% Document
+% --------------------
+\begin{document}
+
+\maketitle
+
+\vspace{1em}
+
+\noindent
+\textbf{Name:} \rule{6cm}{0.4pt} \hfill
+\textbf{Date:} \rule{3cm}{0.4pt}
+
+\vspace{1em}
+
+\noindent
+\textbf{Instructions:}
+\begin{itemize}[leftmargin=2em]
+  \item Show all work for full credit.
+  \item Simplify all answers unless otherwise stated.
+  \item Calculators are \emph{not} permitted unless explicitly allowed.
+\end{itemize}
+
+\vspace{1em}
+
+% --------------------
+% Questions
+% --------------------
+\begin{questions}
+
+{{ QUESTIONS }}
+
+\end{questions}
+
+\end{document}
