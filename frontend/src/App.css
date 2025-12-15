@@ -1,42 +1,246 @@
-#root {
-  max-width: 1280px;
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  margin: 0;
+  background-color: #f5f7f6;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #1f2933;
+}
+
+.app {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 2.5rem 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* =========================
+   HEADER
+========================= */
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #006747;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #004f39;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #004f39;
 }
 
-.card {
-  padding: 2em;
+/* =========================
+   LAYOUT
+========================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-.read-the-docs {
-  color: #888;
+/* =========================
+   LEFT PANEL (CONTROLS)
+========================= */
+
+.left-panel {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-top: 6px solid #006747;
+}
+
+.left-panel label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.left-panel select,
+.left-panel input[type="number"],
+.left-panel input[type="text"] {
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 0.75rem;
+}
+
+.left-panel select:focus,
+.left-panel input:focus {
+  outline: none;
+  border-color: #006747;
+  box-shadow: 0 0 0 2px rgba(0, 103, 71, 0.15);
+}
+
+/* =========================
+   TOPIC CONTROLS
+========================= */
+
+.topic-row {
+  margin-bottom: 1.25rem;
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.topic-header strong {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.topic-header input {
+  width: 70px;
+  text-align: right;
+}
+
+/* Slider */
+input[type="range"] {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #006747,
+    #006747
+  );
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c9a227;
+  border: 2px solid #004f39;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c9a227;
+  border: 2px solid #004f39;
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  width: 100%;
+  background: #006747;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004f39;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #c9a227;
+  color: #1f2933;
+}
+
+button.secondary:hover {
+  background: #b6921f;
+}
+
+/* =========================
+   RIGHT PANEL (OUTPUT)
+========================= */
+
+.right-panel {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-top: 6px solid #c9a227;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+/* =========================
+   QUESTION PREVIEW
+========================= */
+
+.question-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.question-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.topic-pill {
+  background: #006747;
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* =========================
+   LATEX OUTPUT
+========================= */
+
+textarea {
+  width: 100%;
+  min-height: 260px;
+  padding: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  resize: vertical;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
