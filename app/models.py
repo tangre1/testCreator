@@ -50,3 +50,21 @@ class ExamRequest(BaseModel):
         None,
         description="Optional random seed for reproducible exams"
     )
+
+class CreateQuestionRequest(BaseModel):
+    external_id: str
+    latex: str
+    topic: Optional[str] = None
+    difficulty: Optional[int] = None
+
+
+class CreateBankRequest(BaseModel):
+    bank_key: str
+    course: str
+    unit: str
+    title: Optional[str] = None
+
+class UpdateQuestionRequest(BaseModel):
+    latex: str | None = None
+    topic: str | None = None
+    difficulty: int | None = None

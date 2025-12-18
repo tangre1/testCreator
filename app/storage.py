@@ -1,38 +1,24 @@
 import json
 from pathlib import Path
 
-from .models import QuestionBank
 
-# Directory where question banks are stored
-BANKS_DIR = Path("banks")
+class Bank:
+    def __init__(self, course, unit, questions):
+        self.course = course
+        self.unit = unit
+        self.questions = questions
 
 
-def load_bank(filename: str) -> QuestionBank:
-    """
-    Load a question bank from a JSON file.
+def load_bank(bank_file: str):
+    bank_path = Path("banks") / bank_file
 
-    Args:
-        filename: Name of the JSON file in the banks/ directory
+    if not bank_path.exists():
+        raise FileNotFoundError(f"Bank file '{bank_file}' not found")
 
-    Returns:
-        QuestionBank: Parsed and validated question bank
+    data = json.loads(bank_path.read_text(encoding="utf-8"))
 
-    Raises:
-        FileNotFoundError: If the file does not exist
-        ValueError: If the file contents are invalid
-    """
-    path = BANKS_DIR / filename
-
-    if not path.exists():
-        raise FileNotFoundError(f"Question bank '{filename}' not found")
-
-    try:
-        with path.open("r", encoding="utf-8") as f:
-            data = json.load(f)
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Invalid JSON in '{filename}': {e}")
-
-    try:
-        return QuestionBank(**data)
-    except Exception as e:
-        raise ValueError(f"Invalid question bank schema: {e}")
+    return Bank(
+        course=data["course"],
+        unit=data["unit"],
+        questions=data["questions"],
+    )

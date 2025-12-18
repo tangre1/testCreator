@@ -1,0 +1,12 @@
+{
+  "course": "Calculus II",
+  "unit": "Unit 2",
+  "questions": [
+    {
+      "id": "calc2_u2_q1",
+      "topic": "PLACEHOLDER_TOPIC",
+      "difficulty": 1,
+      "latex": "\\question PLACEHOLDER QUESTION TEXT WITH $x^2$"
+    }
+  ]
+}

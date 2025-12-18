@@ -1,88 +1,87 @@
 \documentclass[12pt]{article}
 
-\usepackage{amsmath,amssymb}
-\usepackage{geometry}
-
-\geometry{
-  letterpaper,
-  left=1in,
-  right=1in,
-  top=1in,
-  bottom=1in
-}
+% --------------------
+% Packages
+% --------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{setspace}
 
 % --------------------
-% Page style (CSU exact)
+% Page Style
 % --------------------
-\makeatletter
-\def\ps@plain{
-  \def\@oddhead{\hbox to \textwidth{A1\hfil\thepage}}
-  \def\@oddfoot{}
-}
-\pagestyle{plain}
-\makeatother
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{A1}
+\fancyhead[R]{\thepage}
 
+% --------------------
+% Document
+% --------------------
 \begin{document}
 
-% =====================
+% ====================
 % COVER PAGE
-% =====================
+% ====================
+\thispagestyle{empty}
 
-\vspace*{0.8em}
+\vspace*{0.5in}
 
 \noindent
-\textbf{NAME:}\hspace{0.5em}\rule{5.7in}{0.4pt}
+\textbf{NAME:}\ \rule{5.5in}{0.4pt}
 
-\vspace{2em}
+\vspace{0.75in}
 
 \begin{center}
-{\Large \textbf{Fall 2023 \hspace{1em} Cleveland State University}}\\[0.3em]
+{\Large \textbf{Fall 2023 \hspace{1.5cm} Cleveland State University}} \\[0.3cm]
 {\Large \textbf{Precalculus I MTH167 Test 1}}
 \end{center}
 
-\vspace{2em}
+\vspace{0.6in}
 
 \noindent
-\textbf{Instructions:} Work as many problems, or parts of problems, as you are able.
+\textbf{Instructions:}
+Work as many problems, or parts of problems, as you are able.
 Justify all solutions, showing all the steps in your calculations.
-Answers should be given as exact values, unless a decimal approximation is
-specifically requested.
+Answers should be given as exact values, unless a decimal approximation
+is specifically requested.
 
-\vspace{1em}
+\vspace{0.4in}
 
 \noindent
 This exam consists of 8 questions printed on 7 pages (including the cover page),
 for a total of 100 points.
 
-\vspace{3em}
+\vspace{0.75in}
 
 \noindent
-\textbf{Name:}\hspace{0.5em}\rule{5.4in}{0.4pt}
+\textbf{Name:}\ \rule{4.75in}{0.4pt}
 
-\vspace{1.5em}
-
-\noindent
-\textbf{Section \#:}\hspace{0.5em}\rule{5.2in}{0.4pt}
-
-\vspace{1.5em}
+\vspace{0.4in}
 
 \noindent
-\textbf{Instructor:}\hspace{0.5em}\rule{5.1in}{0.4pt}
+\textbf{Section \#:}\ \rule{4.5in}{0.4pt}
+
+\vspace{0.4in}
+
+\noindent
+\textbf{Instructor:}\ \rule{4.4in}{0.4pt}
 
 \vfill
 
 \noindent
 Please do not write below this line.
 
-\vspace{0.4em}
+\vspace{0.2in}
+
 \hrule
 
-\vspace{1.5em}
+\vspace{0.4in}
 
-% --------------------
-% POINTS TABLE
-% --------------------
 \noindent
+\begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
 1 [24] & 2 [14] & 3 [14] & 4 [10] & 5 [10] & 6 [8] & 7 [10] & 8 [10] & Total [100] \\
@@ -90,23 +89,14 @@ Please do not write below this line.
  &  &  &  &  &  &  &  &  \\
 \hline
 \end{tabular}
+\end{center}
 
 \newpage
 
-% =====================
-% PAGE 2+ HEADER
-% =====================
-\makeatletter
-\def\ps@plain{
-  \def\@oddhead{\hbox to \textwidth{A1\quad NAME:\hfil\thepage}}
-  \def\@oddfoot{}
-}
-\pagestyle{plain}
-\makeatother
-
-% =====================
+% ====================
 % QUESTIONS
-% =====================
+% ====================
+\pagestyle{fancy}
 
 {{ QUESTIONS }}
 
